@@ -8,10 +8,8 @@
           <artifactId>multimodul</artifactId>
           <version>${revision}</version>
     </parent>
-
-    <groupId>com.multimodul</groupId>
+    
     <artifactId>from-vscode</artifactId>
-    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
