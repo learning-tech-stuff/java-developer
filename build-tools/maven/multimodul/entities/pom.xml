@@ -7,7 +7,7 @@
   <parent>
     <groupId>com.multimodul</groupId>
     <artifactId>multimodul</artifactId>
-    <version>1</version>
+    <version>${revision}</version>
   </parent>
 
   <artifactId>entities</artifactId>
