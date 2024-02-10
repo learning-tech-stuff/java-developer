@@ -160,6 +160,31 @@ Often used when setting a proxy.
 6. Optional dependencies - excluded by default for downstream projects
 
 
+# Testing
+- Unit testing is completed by surefire plugin
+- Integration testing is completed by failsafe plugin
+Both:
+- pojos tests
+- junit
+- testing 
+
+> JoCoCo - test reports 
+
+# Multi  module project
+Parent/master pom and we have  modules that inherit from it. Each module has its own pom file with their own packaging type.
+Each module has its own POM file in separate directory with a relative path to the parent POM.
+Parent POM contains shared configuration for all modules.
+Modules can have their own dependencyManagement section.
+Dependencies specified in the parent POM are available to all child modules.
+Child modules can override any settings defined in the parent POM.
+
+To build multi module project you need to run mvn install on the root folder.
+
+
+## Aggregator projects
+Aggregator project is a project that includes multiple other maven projects as modules and builds them together
+
+
 
 
 
