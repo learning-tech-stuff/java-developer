@@ -184,6 +184,56 @@ To build multi module project you need to run mvn install on the root folder.
 ## Aggregator projects
 Aggregator project is a project that includes multiple other maven projects as modules and builds them together
 
+# Bill of Material - BOM
+A Bill of Materials (BOM) is a project that contains a list of dependencies.
+It's useful when you want to manage a set of libraries across multiple projects. 
+The BOM itself does not include any code but it provides metadata about what should be included in each project.
+You can use it as a way to control what goes into your application server.
+
+The BOM itself does not include any code but provides metadata about the dependencies.
+When using a BOM, Maven will look at each declared dependency and add them to the classpath.
+If two different versions of the same library are listed in the BOM then Maven will fail because this would lead to inconsistent behavior within an application.
+If two different versions of the same library are listed in the BOM then one will win over the other.
+
+BOM are the dependencies declared within the dependencyManagement section of the pom.
+Dependencies declared under the dependencies section of the POM inherit from dependencyManagement version/packaging.
+
+# Repositories
+## Repository elements
+- id
+- name
+- url
+- layout - legacy or default
+- releases
+- snapshots
+
+## Policies
+- enabled 
+- updatePolicy
+- checksumPolicy
+
+```
+<repositories>
+...
+</repositories>
+```
+
+# Maven settings file
+## Elements
+- localRepository
+- interactiveMode
+- usePluginRegistry
+- offline
+- pluginGroups
+- servers
+- mirrors
+- proxies 
+- profiles
+- activeProfiles
+
+# Missing deployment and other configurations
+
+
 
 
 
